@@ -1,3 +1,4 @@
+function searchAway() {
   document.getElementById("foundTicket").textContent = "";
 
   board = document.getElementById("board").value;
@@ -50,13 +51,12 @@ function onlyUnique(value, index, self) {
 function createHtml(array, num) {
   amtFound++;
 
-      var element = document.createElement("div");
-      element.appendChild(document.createTextNode('•  ' + myArray[i].name + " "));
-      var link = document.createElement("a");
-      link.innerHTML = '<a href="' + myArray[i].shortUrl + '" target=_blank>Trello Link</a>';
-      element.appendChild(link);
-      document.getElementById("foundTicket").appendChild(element);
-    }
-  }
+  var element = document.createElement("div");
+  element.appendChild(document.createTextNode('•  ' + array[num].name + " "));
+  var link = document.createElement("a");
+  link.innerHTML = '<a href="' + array[num].shortUrl + '" target=_blank>Trello Link</a>';
+  element.appendChild(link);
+  document.getElementById("foundTicket").appendChild(element);
+
   document.getElementById("resultNum").innerHTML = "Results found: " + amtFound;
 }
