@@ -25,5 +25,5 @@
 
 
 ## Show your support
-Give a ⭐️ if this project helped you!
-Give a ⭐️ to the original project too: https://github.com/y3ll0wlife/Discord-Bug-Searcher
+* Give a ⭐️ if this project helped you!
+* Give a ⭐️ to the original project too: https://github.com/y3ll0wlife/Discord-Bug-Searcher
