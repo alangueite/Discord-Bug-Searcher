@@ -20,7 +20,7 @@
 
 👤 **alangueite**
 
-* Twitter [@alangueite](https://twitter.com/alangueite)
+* Twitter: [@alangueite](https://twitter.com/alangueite)
 * Github: [alangueite](https://github.com/alangueite)
 
 
