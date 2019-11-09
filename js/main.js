@@ -1,8 +1,9 @@
-function searchAway() {
   document.getElementById("foundTicket").textContent = "";
 
   board = document.getElementById("board").value;
+  var searchTerms = document.getElementById("searchTerm").value.toLowerCase();
   boardID = "";
+
   if (board == "Desktop") boardID = "5771673855f47b547f2decc3";
   if (board == "Linux") boardID = "5846f7fdfa2f44d1f47267b0";
 
