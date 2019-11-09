@@ -15,24 +15,39 @@ function searchAway() {
 
   let url = "https://api.trello.com/1/boards/" + boardID + "/?cards=all";
 
-  foundCards = [];
   amtFound = 0;
   fetch(url)
     .then(res => res.json())
     .then(out => {
       output = out.cards;
-      search(document.getElementById("searchTerm").value.toLowerCase(), output);
+      search(searchTerms, output);
     })
     .catch(err => {
       throw err;
     });
 }
-
 function search(nameKey, myArray) {
+  var textArray = nameKey.split(" ");
+  var found = [];
   for (var i = 0; i < myArray.length; i++) {
-    if (myArray[i].name.toLowerCase().includes(nameKey)) {
-      foundCards.push(myArray[i]);
-      amtFound++;
+    if (textArray.length >= 2) {
+      for (var z = 0; z < textArray.length; z++) {
+        if (myArray[i].name.toLowerCase().includes(textArray[z])) {
+          found.push(myArray[i]);
+        }
+      }
+    } else {
+      if (myArray[i].name.toLowerCase().includes(nameKey)) createHtml(myArray, i);
+    }
+  }
+  var ticket = found.filter(onlyUnique);
+  for (var z = 0; z < ticket.length; z++) createHtml(ticket, z);
+}
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) != index;
+}
+function createHtml(array, num) {
+  amtFound++;
 
       var element = document.createElement("div");
       element.appendChild(document.createTextNode('•  ' + myArray[i].name + " "));
