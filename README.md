@@ -27,3 +27,7 @@
 ## Show your support
 * Give a ⭐️ if this project helped you!
 * Give a ⭐️ to the original project too: https://github.com/y3ll0wlife/Discord-Bug-Searcher
+
+## 📝 License
+Copyright © 2019 y3ll0wlife  
+This project is [MIT](https://github.com/y3ll0wlife/Discord-Bug-Searcher/blob/master/LICENSE) licensed.
